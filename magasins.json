@@ -1,0 +1,30 @@
+[
+  {
+    "zone": "Sud",
+    "cp": "31520 RAMONVILLE ST-AGNE",
+    "adresse": "2 Avenue des Crêtes",
+    "tel": "05 62 19 19 79",
+    "horaire": "Horaires des bureaux:\nLun-Ven de 9h-12h30\n13h15-17h30, Sam 9h-\n13h."
+  },
+  {
+    "zone": "Nord-Est",
+    "cp": "31200 TOULOUSE",
+    "adresse": "243 Route d'Albi",
+    "tel": "05 61 11 03 53",
+    "horaire": "Horaires des bureaux\nLun-Ven de 9h-12h30\n13h15-17h30. Sam 9h-\n13h."
+  },
+  {
+    "zone": "Université" ,
+    "cp": "31100 TOULOUSE",
+    "adresse": "70 Rue Jacques Babinet",
+    "tel" : "05 34 60 31 10",
+    "horaire":"Horaires des bureaux:\nLun-Ven de 9h-12h30\n13h15-17h30, Sam 9h.\n13h"
+  },
+  {
+    "zone": "Ouest",
+    "cp": "31300 TOULOUSE",
+    "adresse": "4 Rue de Caulet",
+    "tel": "05 34 55 19 18",
+    "horaire": "Horaires des bureaux\nLun-Ven de 9h-12h30\n13h15-17h30, Sam 9h\n13h."
+  }
+]
