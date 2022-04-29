@@ -9,29 +9,46 @@
 body{
     background-color: #923205;
 }
+.burger{
+    display: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
 
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
-
+}
+.nav-bar i{
+    margin-right: 20px;
+}
 .nav-bar{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     padding: 10px;
     background-color: #c44a21;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-
 }
 
 .nav-bar button{
+
     background-color: #923205;
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(.84,.21,.23,.76);
@@ -76,7 +93,8 @@ body{
 }
 
 .presentation{
-    background-color: #922200;
+    background: rgb(133,31,0);
+    background: linear-gradient(180deg, rgba(133,31,0,1) 14%, rgba(146,50,5,1) 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,22 +102,67 @@ body{
 
 .presentation h3{
     color: #e87f2a;
+    font-size: 40px;
 }
 
 .presentation p{
     color:white;
-    text-align: justify;
-    width: 500px;
     margin:10px;
+    text-align: justify;
+}
+
+.p1{
+    min-width: 600px;
+    max-width: 700px;
+
+    align-self: flex-start;
+    margin-left: 70px;
+    margin-right: 70px;
+    font-size: 30px;
 }
 
 
+
+.p2{
+    background-color: #923205;
+    border: 1px solid #923205;
+    border-radius: 10px;
+
+    margin-left: 70px;
+    align-self: flex-start;
+    width: 500px;
+    font-size: 16px;
+}
+
+
+
+.p3{
+    background-color: #923205;
+    border: 1px solid #923205;
+    border-radius: 10px;
+    align-self: flex-end;
+    margin-right: 70px;
+    width: 500px;
+    font-size: 16px;
+}
+
+.p4{
+    background-color: #923205;
+    border: 1px solid #923205;
+    border-radius: 10px;
+    align-self: flex-start;
+    width: 500px;
+    margin-left: 70px;
+    font-size: 16px;
+}
 
 
 #tuiles{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    min-height: 216px;
+    max-height: 824px;
 }
 
 .tuile{
@@ -114,10 +177,11 @@ body{
 
 
 .search{
-    width: 100%;
+
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    margin: 0 70px 30px 70px;
 
 }
 
@@ -146,8 +210,123 @@ body{
 footer a{
     color: deepskyblue;
     cursor: pointer;
+
 }
 
 
+/*PARTIE PERMETTANT L'AFFICHAGE AU DEFILEMENT*/
+[class*="reveal-"]{
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.reveal-visible{
+    opacity: 1;
+    transform: translateY(0);
+    transition: .7s cubic-bezier(.5,0,0,1);
+}
+
+.reveal-2{
+    transition-delay: .2s;
+}
+
+.reveal-3{
+    transition-delay: .3s;
+}
+
+.reveal-4{
+    transition-delay: .4s;
+}
+
+.reveal-5{
+    transition-delay: .5s;
+}
+
+.reveal-6{
+    transition-delay: 0.7s;
+}
+.reveal-7{
+    transition-delay: .9s;
+}
+
+@media only screen and (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    .burger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .burger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+
+    }
+
+    .nav-list {
+        position: fixed;
+        left: -100%;
+        top: 68px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #c44a21;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        font-size: 13px;
+    }
+
+    .nav-bar li {
+        margin: 14px 0;
+    }
+
+    .nav-list.active {
+        left: 0;
+    }
+
+    .nav-element{
+        border-right: 0;
+
+    }
 
 
+    .p1{
+        font-size: 26px;
+        align-self: center;
+        margin: 0;
+        min-width: 0;
+    }
+    .p2{
+        align-self: center;
+        margin: 0;
+
+
+    }
+    .p3{
+        align-self: center;
+        margin: 0;
+
+    }
+    .p4{
+        align-self: center;
+        margin: 0;
+
+    }
+
+    .presentation h3{
+        font-size: 30px;
+        margin-top: 75px;
+    }
+}
